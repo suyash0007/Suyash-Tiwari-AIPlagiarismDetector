@@ -116,7 +116,7 @@ function Benifits() {
                             PLAGIARISM CHECKER FOR EDUCATORS
                         </Button>
                     </div>
-                    <div className="lg:w-1/2 mr-10">
+                    <div className="lg:w-1/2 lg:mr-10">
                         <img
                             src="/images/educators.webp"
                             alt="Classroom interior"

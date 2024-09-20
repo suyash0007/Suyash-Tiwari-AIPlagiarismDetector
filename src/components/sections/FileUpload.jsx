@@ -3,6 +3,7 @@ import { useDropzone } from 'react-dropzone'
 import { Button } from "@/components/ui/button"
 import { Upload, FileText } from 'lucide-react'
 import PlagiarismContext from '@/context/PlagiarismContext'
+import extractText from '@/utils/extractText'
 
 function FileUpload() {
 
@@ -14,7 +15,7 @@ function FileUpload() {
         setIsLoading(true)
 
         try {
-            const { default: extractText } = await import('@/utils/extractText');
+            // const { default: extractText } = await import('@/utils/extractText');
             const { default: checkForPlagiarism } = await import('@/utils/checkForPlagiarism');
             const extractedText = await extractText(uploadedFile)
             const response = await checkForPlagiarism(extractedText)
